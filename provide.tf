@@ -1,16 +1,17 @@
-## Hi there 👋
+terraform{
+    required_providers{
+      azurem={
+        source="hashicorp/azurem"
+        version= ">=3.70.0"#this version azurem, not terraform version
+      }
+    }
+    required_version=">=1.4.0"#this version is for terraform version, not azurem
+}
 
-<!--
-**faustus85/faustus85** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+provider "azurem"{
+    features{}
+    subscription_id=var.subscription_id
+    client_id=var .client_id
+    client_secret=var.client_secret
+    tenant_id=var.tenant_id
+}
